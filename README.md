@@ -3,7 +3,7 @@
 1. Install pass, and then install gopass (maybe it's not required to install pass first)
 2. Softlink pass to gopass: `sudo ln -s /usr/local/bin/gopass /usr/bin/pass`
 3. \[IMPORTANT\]: make sure on an existing user account, to do: `pass recipients add <GPG PUB KEY ID>`
-4. Clone this repo: `gopass clone git@github.com:xpire/pass-store.git --sync gitcli`
+4. Clone your pass-store repo: `gopass clone git@github.com:<user>/<repoName>.git --sync gitcli`
 
 This should be it for getting this to work. Extra steps for getting this to work on WSL with browswerpass. See the following links:
 - Browserpass Native: https://github.com/browserpass/browserpass-native
