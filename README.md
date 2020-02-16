@@ -1,4 +1,4 @@
-# How to use
+# How to use gopass with WSL Ubuntu 18.04 and Windows 10 Chrome
 
 1. Install pass, and then install gopass (maybe it's not required to install pass first)
 2. Softlink pass to gopass: `sudo ln -s /usr/local/bin/gopass /usr/bin/pass`
