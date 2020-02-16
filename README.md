@@ -61,4 +61,5 @@ pinentry-program /home/xpirep/.gnupg/my-pinentry.sh
 # starting gpg-agent on startup for browserpass
 1. git clone into `C:\wsl-autostart` with `git clone git@github.com:troytse/wsl-autostart.git`
 2. follow steps in the repo.
-3. if you fuck up your /etc/sudoers file, its easy to fix for wsl, see https://askubuntu.com/questions/1144326/sudoers-file-syntax-error-on-wsl
+3. I created a file in `/etc/init.d/my_gpg-agent`, which runs `eval $(gpg-agent --daemon)`, and edited `wsl-autostart/commands.txt` to include this file to be called on start up.
+4. if you fuck up your `/etc/sudoers` file, its easy to fix for wsl, see https://askubuntu.com/questions/1144326/sudoers-file-syntax-error-on-wsl
