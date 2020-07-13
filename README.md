@@ -63,3 +63,12 @@ pinentry-program /home/xpirep/.gnupg/my-pinentry.sh
 2. follow steps in the repo.
 3. I created a file in `/etc/init.d/my_gpg-agent`, which runs `eval $(gpg-agent --daemon)`, and edited `wsl-autostart/commands.txt` to include this file to be called on start up.
 4. if you fuck up your `/etc/sudoers` file, its easy to fix for wsl, see https://askubuntu.com/questions/1144326/sudoers-file-syntax-error-on-wsl
+5. Sometimes my firefox or chrome extension bugs out, and wsl gui fails to show up, I have created a bash function which restarts the gpg agent, which usually fixes the problem:
+```
+#!/bin/bash
+refresh() {
+    # restarts gpg-agent if browserpass gets iffy
+    gpgconf --kill gpg-agent
+    gpg-agent --daemon
+}
+```
