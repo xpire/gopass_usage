@@ -72,3 +72,4 @@ refresh() {
     gpg-agent --daemon
 }
 ```
+6. Alternatively, instead of following the exact guidelines of `wsl-autostart`, this issue has a great alternative which doesn't prompt admin access at start up all the time: https://github.com/troytse/wsl-autostart/issues/2#issuecomment-551521208
